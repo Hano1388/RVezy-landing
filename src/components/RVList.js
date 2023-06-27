@@ -5,7 +5,7 @@ const RVList = ({ listOfRVs }) => {
     return (
         <div className="rv-list">
             {listOfRVs.map((rv, i) => (
-                <RVDetails rvDetails={rv} key={rv.AliasName} />
+                <RVDetails rvDetails={rv} key={i} />
             ))}
         </div>
     )

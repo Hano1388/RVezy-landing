@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useFetch } from '../hooks/useFetch';
 import { API_URL } from '../constants';
 import RVList from './RVList';
+import Pagination from './Pagination';
 
 const App = () => {
     const [url, setUrl] = useState(API_URL);
@@ -20,6 +21,7 @@ const App = () => {
                 {data && (<RVList listOfRVs={data}/>)}
                 <div className="rvs-on-map">Map</div>
             </div>
+            <Pagination url={url} setUrl={setUrl}/>
         </div>
     )
 };
