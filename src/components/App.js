@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useFetch } from '../hooks/useFetch';
 import { API_URL } from '../constants';
 import RVList from './RVList';
 import Pagination from './Pagination';
-import { updateQuery } from '../utils';
 
 const App = () => {
     const [url, setUrl] = useState(API_URL);
@@ -28,7 +27,6 @@ const App = () => {
         const newUrl = new URL(url);
         searchFilters.drivable ? newUrl.searchParams.set('ClassA', true) : newUrl.searchParams.delete('ClassA');
         searchFilters.towable ? newUrl.searchParams.set('FifthWheel', true) : newUrl.searchParams.delete('FifthWheel');
-        console.log('>>>>>> ', searchFilters);
         setUrl(newUrl);
 
     }
