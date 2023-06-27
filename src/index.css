@@ -1,0 +1,40 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.App {
+    display: flex;
+    flex-direction: column; 
+    padding: 10px;
+}
+.search-rvs {
+    background: lightblue;
+    min-height: 200px;
+}
+.listings {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 40px;
+}
+
+.rv-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.rv-details {
+    padding: 10px;
+    width: 100%;
+}
+
+.rv-img {
+    width: 100%;
+    height: 200px;
+}
+.the-rest {
+    display: block;
+    margin-top: 10px;
+    font-weight: bolder;
+}
